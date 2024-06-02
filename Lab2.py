@@ -1,18 +1,21 @@
 import pandas as pd
-import numpy as np
+# import numpy as np
 from sklearn import preprocessing
 import matplotlib.pyplot as plt
-from sklearn.decomposition import PCA
-from sklearn.decomposition import KernelPCA
-from sklearn.decomposition import SparsePCA
+# from sklearn.decomposition import PCA
+# from sklearn.decomposition import KernelPCA
+# from sklearn.decomposition import SparsePCA
 from sklearn.decomposition import FactorAnalysis
 
+#df = pd.read_csv('C:/Users/feavl/OneDrive/Рабочий стол/МТУСИ/3 курс/Управление данными/лабы/lab2/glass.csv')
+df = pd.read_csv()
 
-df = pd.read_csv('C:/Users/feavl/OneDrive/Рабочий стол/МТУСИ/3 курс/Управление данными/лабы/lab2/glass.csv')
-
-var_names = list(df.columns) #получение имен признаков
-labels = df.to_numpy('int')[:,-1] #метки классов
-data = df.to_numpy('float')[:,:-1] #описательные признаки
+# получение имен признаков
+var_names = list(df.columns) 
+# метки классов 
+labels = df.to_numpy('int')[:,-1] 
+# описательные признаки
+data = df.to_numpy('float')[:,:-1] 
 
 data = preprocessing.minmax_scale(data)
 
