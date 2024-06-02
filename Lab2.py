@@ -7,15 +7,15 @@ import matplotlib.pyplot as plt
 # from sklearn.decomposition import SparsePCA
 from sklearn.decomposition import FactorAnalysis
 
-#df = pd.read_csv('C:/Users/feavl/OneDrive/Рабочий стол/МТУСИ/3 курс/Управление данными/лабы/lab2/glass.csv')
+# df = pd.read_csv('C:/Users/feavl/Рабочий стол/lab2/glass.csv')
 df = pd.read_csv()
 
 # получение имен признаков
-var_names = list(df.columns) 
-# метки классов 
-labels = df.to_numpy('int')[:,-1] 
+var_names = list(df.columns)
+# метки классов
+labels = df.to_numpy('int')[:, -1]
 # описательные признаки
-data = df.to_numpy('float')[:,:-1] 
+data = df.to_numpy('float')[:, :-1]
 
 data = preprocessing.minmax_scale(data)
 
@@ -46,7 +46,8 @@ data = preprocessing.minmax_scale(data)
 # fig, axs = plt.subplots(2,4)
 #
 # for i in range(data.shape[1]-1):
-#     axs[i // 4, i % 4].scatter(pca_inverse_transform[:,i],pca_inverse_transform[:,(i+1)],c=labels,cmap='hsv')
+#     axs[i // 4, i % 4].scatter(pca_inverse_transform[:,i],
+# pca_inverse_transform[:,(i+1)],c=labels,cmap='hsv')
 #     axs[i // 4, i % 4].set_xlabel(var_names[i])
 #     axs[i // 4, i % 4].set_ylabel(var_names[i+1])
 # plt.show()
