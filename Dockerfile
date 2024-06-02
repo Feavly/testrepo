@@ -5,7 +5,7 @@ FROM python:3
 WORKDIR /app
 
 # Копируем исходный код в контейнер
-COPY calc.py /app.calc.py
+COPY Lab2.py /app.Lab2.py
 
 # Запускаем приложение при старте контейнера
-CMD ["python", "/app/calc/py"]
+CMD ["python", "/app/Lab2/py"]
